@@ -14,6 +14,23 @@ let snakeArr = [
 food = {x: 6, y: 7};
 function changeDirection(dir) {
   switch (dir) {
+    case 'up':
+      if (direction.y !== 1) direction = { x: 0, y: -1 };
+      break;
+    case 'down':
+      if (direction.y !== -1) direction = { x: 0, y: 1 };
+      break;
+    case 'left':
+      if (direction.x !== 1) direction = { x: -1, y: 0 };
+      break;
+    case 'right':
+      if (direction.x !== -1) direction = { x: 1, y: 0 };
+      break;
+  }
+}
+
+function changeDirection(dir) {
+  switch (dir) {
     case 'up': direction = { x: 0, y: -1 }; break;
     case 'down': direction = { x: 0, y: 1 }; break;
     case 'left': direction = { x: -1, y: 0 }; break;
