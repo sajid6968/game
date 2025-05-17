@@ -12,6 +12,15 @@ let snakeArr = [
 ];
 
 food = {x: 6, y: 7};
+function changeDirection(dir) {
+  switch (dir) {
+    case 'up': direction = { x: 0, y: -1 }; break;
+    case 'down': direction = { x: 0, y: 1 }; break;
+    case 'left': direction = { x: -1, y: 0 }; break;
+    case 'right': direction = { x: 1, y: 0 }; break;
+  }
+}
+
 
 // Game Functions
 function main(ctime) {
